@@ -53,4 +53,5 @@ jobs:
               cd 234-deploylab-backend2
               docker-compose -H ${{ secrets.HOST_SERVER }} down -remove-orphans
               docker-compose -H ${{ secrets.HOST_SERVER }} pull
-              docker-compose -H ${{ secrets.HOST_SERVER }} up -d
+              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml up -d
+
